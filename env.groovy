@@ -1,0 +1,2 @@
+env.ANSIBLE_HOST="192.168.33.51"
+env.ANSIBLE_USER="vagrant"
