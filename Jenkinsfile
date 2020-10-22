@@ -37,7 +37,7 @@ pipeline {
             steps {
                 sh '''
                 echo "ansible ansible_ssh_host=192.168.33.51 ansible_ssh_user=vagrant" > hosts && \
-                ansible-playbook playbook.yaml -i ca.pem
+                ansible-playbook playbook.yaml --private-key=ca.pem
                 '''
             }
         }
