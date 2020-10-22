@@ -36,7 +36,7 @@ pipeline {
         stage('ansible') {
             steps {
                 sh '''
-                echo "ansible ansible_ssh_host=${ANSIBLE_HOST} ansible_ssh_user=${ANSIBLE_USER}" > hosts && \
+                echo "ansible ansible_ssh_host=192.168.33.51 ansible_ssh_user=vagrant" > hosts && \
                 ansible-playbook playbook.yaml
                 '''
             }
