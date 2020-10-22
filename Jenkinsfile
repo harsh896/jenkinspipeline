@@ -1,20 +1,23 @@
 pipeline {
     agent any
-
+    environment {
+        name = "harsh"
+        age  = 80
+    }
     stages {
         stage('build') {
             steps {
-                echo "Build Function"
+                echo "Build Function = $BUILD_ID"
             }
         }
         stage('test') {
             steps {
-                echo "Test Function"
+                echo "Tested by $name"
             }
         }
         stage('deploy') {
             steps {
-                echo "Deploy Function"
+                echo "Deploy age is $age"
             }
         }
     }
