@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        choice(name: 'version', choices: ['1.1, 1.2, 1.3'], description: 'Select Version')
+        choice(name: 'version', choices: ['1.1', '1.2', '1.3'], description: 'Select Version')
         string(name: 'city', defaultValue: 'Ahmedabad', description: '')
         booleanParam(name: 'executeTests', defaultValue: true, description: '')
     }
